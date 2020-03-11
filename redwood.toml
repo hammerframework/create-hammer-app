@@ -1,7 +1,9 @@
 [web]
+  host = "localhost"
   port = 8910
   apiProxyPath = "/.netlify/functions"
 [api]
+  host = "localhost"
   port = 8911
 [browser]
   open = true
