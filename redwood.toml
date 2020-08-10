@@ -9,7 +9,7 @@
 
 [web]
   port = 8910
-  apiProxyPath = "/.netlify/functions"
+  apiProxyPath = "/api"
 [api]
   port = 8911
 [browser]
