@@ -6,11 +6,18 @@ import Routes from 'src/Routes'
 
 import './index.css'
 
-ReactDOM.render(
+const App = (
   <FatalErrorBoundary page={FatalErrorPage}>
     <RedwoodProvider>
       <Routes />
     </RedwoodProvider>
-  </FatalErrorBoundary>,
-  document.getElementById('redwood-app')
+  </FatalErrorBoundary>
 )
+
+const rootElement = document.getElementById('redwood-app')
+
+if (rootElement.hasChildNodes()) {
+  ReactDOM.hydrate(App, rootElement)
+} else {
+  ReactDOM.render(App, rootElement)
+}
