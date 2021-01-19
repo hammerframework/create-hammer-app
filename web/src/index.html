@@ -7,6 +7,9 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <div id="redwood-app"><server-markup/></div>
+    <div id="redwood-app">
+      <!-- Please keep the line below for @redwood/prerender support -->
+      <%= prerenderMarkup %>
+    </div>
   </body>
 </html>
